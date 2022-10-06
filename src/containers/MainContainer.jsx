@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import '../styles/containers/MainContainer.scss';
 
-export const Container = () => {
+export const MainContainer = () => {
   return (
     
     <section className="main-container">

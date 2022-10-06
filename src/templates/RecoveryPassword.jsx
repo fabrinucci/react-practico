@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/templates/RecoveryPassword.scss';
 
 export const RecoveryPassword = () => {
   return (

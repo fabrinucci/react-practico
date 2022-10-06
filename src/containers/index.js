@@ -1,3 +1,2 @@
+export { MainContainer } from './MainContainer';
 export { Layout } from './Layout';
-export { Login } from './Login';
-export { RecoveryPassword } from './RecoveryPassword';

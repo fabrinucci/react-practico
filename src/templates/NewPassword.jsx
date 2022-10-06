@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/Login.scss';
+import '../styles/templates/NewPassword.scss';
 
-export const Login = () => {
+export const NewPassword = () => {
   return (
     <div className="login">
       <div className="form-container">
