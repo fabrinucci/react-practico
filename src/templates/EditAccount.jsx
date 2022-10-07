@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '@styles/templates/EditAccount.scss';
+
 export const EditAccount = () => {
   return (
     <div className="login">
@@ -8,13 +10,13 @@ export const EditAccount = () => {
 
       <form action="/" className="form">
         <div>
-          <label for="name" className="label">Name</label>
+          <label className="label">Name</label>
           <p className="value">Camila Yokoo</p>
 
-          <label for="email" className="label">Email</label>
+          <label className="label">Email</label>
           <p className="value">camilayokoo@gmail.com</p>
 
-          <label for="password" className="label">Password</label>
+          <label className="label">Password</label>
           <p className="value">*********</p>
         </div>
 

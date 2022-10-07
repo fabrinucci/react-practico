@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import '@styles/templates/CreateAccount.scss';
 
 export const CreateAccount = () => {
   return (
@@ -8,13 +10,13 @@ export const CreateAccount = () => {
 
         <form action="/" className="form">
           <div>
-            <label for="name" className="label">Name</label>
+            <label className="label">Name</label>
             <input type="text" id="name" placeholder="Teff" className="input input-name" />
 
-            <label for="email" className="label">Email</label>
+            <label className="label">Email</label>
             <input type="text" id="email" placeholder="platzi@example.com" className="input input-email" />
 
-            <label for="password" className="label">Password</label>
+            <label className="label">Password</label>
             <input type="password" id="password" placeholder="*********" className="input input-password" />
           </div>
 

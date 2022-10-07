@@ -1,14 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../styles/components/Navbar.scss';
+
+import '@styles/containers/Navbar.scss';
+
+import menu from '@icons/icon_menu.svg';
+import logo from '@logos/logo_yard_sale.svg'
+import shoppingCart from '@icons/icon_shopping_cart.svg'
 
 export const Navbar = () => {
   return (
     <nav>
-      <img src="assets/icons/icon_menu.svg" alt="menu" className="menu" />
+      <img src={menu} alt="menu" className="menu" />
 
       <div className="navbar-left">
-        <img src="assets/logos/logo_yard_sale.svg" alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" />
 
         <ul>
           <li>
@@ -36,7 +41,7 @@ export const Navbar = () => {
         <ul>
           <li className="navbar-email">platzi@example.com</li>
           <li className="navbar-shopping-cart">
-            <img src="assets/icons/icon_shopping_cart.svg" alt="shopping cart" />
+            <img src={shoppingCart} alt="shopping cart" />
             <div>2</div>
           </li>
         </ul>

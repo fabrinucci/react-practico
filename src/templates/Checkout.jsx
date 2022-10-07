@@ -1,10 +1,15 @@
 import React from 'react';
 
+import arrow from '@icons/flechita.svg';
+import iconClose from '@icons/icon_close.png';
+
+import '@styles/templates/Checkout.scss';
+
 export const Checkout = () => {
   return (
-    <aside className="product-detail">
+    <aside className="Checkout-detail">
       <div className="title-container">
-        <img src="./icons/flechita.svg" alt="arrow" />
+        <img src={arrow} alt="arrow" />
         <p className="title">My order</p>
       </div>
 
@@ -15,7 +20,7 @@ export const Checkout = () => {
           </figure>
           <p>Bike</p>
           <p>$30,00</p>
-          <img src="./icons/icon_close.png" alt="close" />
+          <img src={iconClose} alt="close" />
         </div>
 
         <div className="shopping-cart">
@@ -24,7 +29,7 @@ export const Checkout = () => {
           </figure>
           <p>Bike</p>
           <p>$30,00</p>
-          <img src="./icons/icon_close.png" alt="close" />
+          <img src={iconClose} alt="close" />
         </div>
 
         <div className="shopping-cart">
@@ -33,7 +38,7 @@ export const Checkout = () => {
           </figure>
           <p>Bike</p>
           <p>$30,00</p>
-          <img src="./icons/icon_close.png" alt="close" />
+          <img src={iconClose} alt="close" />
         </div>
 
         <div className="order">

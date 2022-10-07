@@ -1,7 +1,8 @@
 import React from 'react';
-import '../styles/components/Menu.scss';
 
-export const Menu = () => {
+import '@styles/containers/MenuDesktop.scss';
+
+export const MenuDesktop = () => {
   return (
     <div className='desktop-menu'>
       <ul>
