@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '@styles/containers/MenuMobile.scss';
+import '@styles/components/menu.scss';
 
 export const MenuMobile = () => {
   return (
