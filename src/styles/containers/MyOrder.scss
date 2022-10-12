@@ -1,0 +1,63 @@
+@use '../vars';
+
+@keyframes swipeLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 360px;
+  }
+}
+
+.MyOrder-detail {
+  width: 360px;
+  padding: 24px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 61px;
+  bottom: auto;
+  background-color: var(--white);
+  border: 1px solid var(--very-light-pink);
+  border-radius: 8px;
+  height: calc(100vh - 61px);
+  box-shadow: 0px 2px 3px 3px #e0dcdc57;
+  animation: swipeLeft 0.46s ease;
+}
+.title-container {
+  display: flex;
+}
+.title-container img {
+  transform: rotate(180deg);
+  margin-right: 14px;
+}
+.title {
+  font-size: var(--lg);
+  font-weight: bold;
+}
+
+.my-order-content {
+  max-height: 63%;
+  overflow: auto;
+}
+
+.my-order-content::-webkit-scrollbar{
+	display: none;
+}
+
+.primary-button {
+  background-color: var(--hospital-green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+}
+@media (max-width: 640px) {
+  .product-detail {
+    width: 100%;
+  }
+}

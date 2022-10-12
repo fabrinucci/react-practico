@@ -4,7 +4,7 @@ import '@styles/templates/EditAccount.scss';
 
 export const EditAccount = () => {
   return (
-    <div className="login">
+    <div className="login fixed">
     <div className="form-container">
       <h1 className="title">My account</h1>
 

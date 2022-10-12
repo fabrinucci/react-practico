@@ -21,37 +21,37 @@ export const Login = () => {
   }
 
   return (
-    <div className='login'>
-    <div className='form-container'>
-      <img src={logo} alt='logo' className='logo' />
+    <div className='login fixed'>
+      <div className='form-container'>
+        <img src={logo} alt='logo' className='logo' />
 
-      <form 
-        action='/' 
-        className='form'
-        ref={ form }
-        onSubmit={ handleSubmit }
-      >
-        <label className='label'>Email address</label>
-        <input type='text' name='email' placeholder='platzi@example.cm' className='input input-email' />
+        <form 
+          action='/' 
+          className='form'
+          ref={ form }
+          onSubmit={ handleSubmit }
+        >
+          <label className='label'>Email address</label>
+          <input type='text' name='email' placeholder='platzi@example.cm' className='input input-email' />
 
-        <label className='label'>Password</label>
-        <input type='password' name='password' placeholder='*********' className='input input-password' />
+          <label className='label'>Password</label>
+          <input type='password' name='password' placeholder='*********' className='input input-password' />
+
+          <button 
+            type='submit' 
+            className='primary-button login-button'
+          >
+            Log in
+          </button>
+          <Link to='/new-password'>Forgot my password</Link>
+        </form>
 
         <button 
-          type='submit' 
-          className='primary-button login-button'
+          className='secondary-button signup-button'
         >
-          Log in
+          Sign up
         </button>
-        <Link to='/new-password'>Forgot my password</Link>
-      </form>
-
-      <button 
-        className='secondary-button signup-button'
-      >
-        Sign up
-      </button>
+      </div>
     </div>
-  </div>
   )
 }

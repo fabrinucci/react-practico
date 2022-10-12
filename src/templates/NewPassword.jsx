@@ -6,7 +6,7 @@ import logo from '@logos/logo_yard_sale.svg'
 
 export const NewPassword = () => {
   return (
-    <div className="login">
+    <div className="login fixed">
       <div className="form-container">
         <img src={logo} alt="logo" className="logo" />
 

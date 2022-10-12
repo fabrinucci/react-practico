@@ -21,7 +21,6 @@ export const MainRoutes = () => {
           <Route path='/others' element={<Others />}/>
 
           {/* Layouts */}
-          <Route path='/checkout' element={<Checkout />}/>
           <Route path='/create-account' element={<CreateAccount />}/>
           <Route path='/edit-account' element={<EditAccount />}/>
           <Route path='/login' element={<Login />}/>

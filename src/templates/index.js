@@ -1,4 +1,3 @@
-export { Checkout } from './Checkout';
 export { CreateAccount } from './CreateAccount';
 export { EditAccount } from './EditAccount';
 export { Login } from './Login';

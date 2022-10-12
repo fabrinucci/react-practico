@@ -4,7 +4,7 @@ import '@styles/templates/CreateAccount.scss';
 
 export const CreateAccount = () => {
   return (
-    <div className="login">
+    <div className="login fixed3">
       <div className="form-container">
         <h1 className="title">My account</h1>
 

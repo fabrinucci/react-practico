@@ -12,15 +12,14 @@ export const MainContainer = () => {
   const products = useGetProducts(API)
 
   return (
-    
     <section className="main-container">
-    <div className="cards-container">
-      { 
-        products.map( product => (
-          <ProductItem product={product} key={product.id}/>
-        ))
-      }
-    </div>
-  </section>
+      <div className="cards-container">
+        { 
+          products.map( product => (
+            <ProductItem product={product} key={product.id}/>
+          ))
+        }
+      </div>
+    </section>
   )
 }

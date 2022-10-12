@@ -1,20 +1,29 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MenuDesktop } from '../components/menu';
-
-import '@styles/containers/Navbar.scss';
+import { AppContext } from '../context';
+import { MyOrder } from './';
 
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg'
 import shoppingCart from '@icons/icon_shopping_cart.svg'
 
+import '@styles/containers/Navbar.scss';
 
 export const Navbar = () => {
 
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  const handleToggle = () => {
+  const [toggleOrder, setToggleOrder] = useState(false);
+
+  const { state: {cart} } = useContext(AppContext);
+
+  const handleToggleMenu = () => {
     setToggleMenu(!toggleMenu)
+  }
+
+  const handleToggleOrder = () => {
+    setToggleOrder(!toggleOrder)
   }
 
   return (
@@ -49,18 +58,24 @@ export const Navbar = () => {
       <div className="navbar-right">
         <ul>
           <li 
-            onClick={ handleToggle }
+            onClick={ handleToggleMenu }
             className="navbar-email"
           >
-            platzi@example.com
+            platzi@gmail.com
           </li>
-          <li className="navbar-shopping-cart">
+          <li 
+            onClick={ handleToggleOrder }
+            className="navbar-shopping-cart"
+          >
             <img src={shoppingCart} alt="shopping cart" />
-            <div>2</div>
+            {
+              (cart.length > 0) && <div>{cart.length}</div>
+            }
           </li>
         </ul>
-      </div>
-      { toggleMenu && <MenuDesktop />}
+      </div> 
+      { (cart.length > 0 && toggleOrder) && <MyOrder /> }
+      { toggleMenu && <MenuDesktop /> }
     </nav>
   )
 }
