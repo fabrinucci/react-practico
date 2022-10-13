@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import arrow from '@icons/flechita.svg';
 
 import '@styles/containers/MyOrder.scss';
 import { MyOrderInfo, MyOrderItem } from '../components/myOrder';
 import { AppContext } from '../context';
 
-export const MyOrder = () => {
+export const MyOrder = ({ setToggleOrder }) => {
 
   const { state: {cart} } = useContext(AppContext);
 
@@ -15,10 +15,18 @@ export const MyOrder = () => {
     return sum
   }
 
+  const handleClose = () => {
+    setToggleOrder(false);
+  }
+
   return (
     <aside className="MyOrder-detail">
       <div className="title-container">
-        <img src={arrow} alt="arrow" />
+        <img 
+          onClick={ handleClose }
+          src={arrow}
+          alt="arrow" 
+        />
         <p className="title">My order</p>
       </div>
 

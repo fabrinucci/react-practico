@@ -13,9 +13,8 @@ import '@styles/containers/Navbar.scss';
 export const Navbar = () => {
 
   const [toggleMenu, setToggleMenu] = useState(false);
-
   const [toggleOrder, setToggleOrder] = useState(false);
-
+  
   const { state: {cart} } = useContext(AppContext);
 
   const handleToggleMenu = () => {
@@ -74,7 +73,13 @@ export const Navbar = () => {
           </li>
         </ul>
       </div> 
-      { (cart.length > 0 && toggleOrder) && <MyOrder /> }
+    
+      { 
+        (cart.length > 0 && toggleOrder) && 
+        <MyOrder 
+          setToggleOrder={setToggleOrder}
+        /> 
+      }
       { toggleMenu && <MenuDesktop /> }
     </nav>
   )
